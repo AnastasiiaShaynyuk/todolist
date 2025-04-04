@@ -62,6 +62,7 @@ export class ToDo extends Component {
               className="addBtn"
               onClick={() => this.addTask(this.state.userInput)}
               type="submit"
+              title="Add Task"
             >
               ➕
             </button>
@@ -77,6 +78,7 @@ export class ToDo extends Component {
                   type="checkbox"
                   checked={this.state.crossed[index] || false}
                   onChange={() => this.crossedTask(index)}
+                  title="Cross Task"
                 />
                 {task}
               </li>
@@ -84,7 +86,7 @@ export class ToDo extends Component {
           </ul>
           {this.state.tasks.length > 0 && (
             <div className="container">
-              <button className="btnDelete" onClick={() => this.deleteTask()}>
+              <button className="btnDelete" onClick={() => this.deleteTask()} title="Delete All">
                 Delete All
               </button>
             </div>
